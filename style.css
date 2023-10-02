@@ -13,6 +13,21 @@
 }
 
 
+@font-face {
+    font-family: poppins-regular;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins-italic;
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+}
+
 
 * {
     box-sizing: border-box;
@@ -59,6 +74,7 @@ main {
 .form__inputs {
     display: flex;
     gap: 20px;
+    font-family: poppins-regular;
 }
 
 .inputcontrol {
@@ -79,6 +95,7 @@ main {
     color: var(--Smokey-grey);
     letter-spacing: 2px;
 
+    font-family: poppins-bold;
     margin-bottom: 5px;
 }
 
@@ -110,16 +127,10 @@ main {
     color: var(--Light-red);
 }
 
-.inputcontrol.success input {
-    border-color: var(--Purple);
-}
 
-.inputcontrol.success label {
-    color: var(--Purple);
-}
 
 .inputcontrol input::-webkit-input-placeholder {
-    font-weight:800;
+    font-family: poppins-bold;
     font-size: 15px;
     color: var(--Light-grey);
 }
@@ -134,6 +145,7 @@ main {
     color: var(--Light-red);
     font-size: 10px;
     font-style: italic;
+    font-family: poppins-italic;
 }
 
 #button {
@@ -207,6 +219,7 @@ main {
 
     .error-msg {
         top: -60px;
+        font-size: 8px;
     }
     
     

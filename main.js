@@ -7,6 +7,7 @@ const dayInput = document.querySelector('#day');
 const monthInput = document.querySelector('#month');
 const yearInput = document.querySelector('#year');
 
+
 // output
 const yearOutput = document.querySelector('#year__output');
 const monthOutput = document.querySelector('#month__output');
@@ -32,7 +33,6 @@ const setError = (element, message) => {
 
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
-    inputControl.classList.remove('success');
 }
 
 
@@ -42,8 +42,6 @@ const setSuccess = element => {
 
     errorDisplay.innerText = '';
     inputControl.classList.remove('error');
-    inputControl.classList.add('success');
-
 }
 
 
