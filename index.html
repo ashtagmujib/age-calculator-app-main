@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
   
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -16,11 +17,64 @@
 </head>
 <body>
 
+  <main>
+    <section class="input">
 
+      <form action="post" class="form">
+
+        <div class="form__inputs">
+          <div class="inputcontrol">
+            <label for="day"> Day </label>
+            <input id="day" placeholder="DD">
+            <div class="error-msg"></div>
+          </div>
+    
+          <div class="inputcontrol">
+            <label for="month">Month</label>
+            <input id="month" placeholder="MM">
+            <div class="error-msg"></div>
+          </div>
+    
+          <div class="inputcontrol">
+            <label for="year"> Year </label>
+            <input id="year" placeholder="YYYY">
+            <div class="error-msg"></div>
+          </div>
+        </div>
   
+        <button id="button">
+          <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+      </form>
+     
+    </section>
+
+    <section class="output">
+      <div> 
+        <em id="year__output">  -- </em> 
+        <h1> years </h1>
+      </div>
+
+      <div> 
+        <em id="month__output">  -- </em> 
+        <h1> months </h1>
+      </div>
+
+      <div> 
+        <em id="day__output">  -- </em> 
+        <h1> days </h1>
+      </div>
+
+    </section>
+  </main>
+
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Abdul-mujib</a>.
   </div>
+
+  <script src="./main.js"></script>
 </body>
 </html>
