@@ -23,6 +23,43 @@ form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInput();
+
+
+    if(isValid) {
+
+        // get current date
+        let currentDate = new Date();
+        let currentDay = currentDate.getDate();
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+
+
+        // current age 
+        let yearOld = currentYear -  yearInput.value;
+        let monthOld = currentMonth - monthInput.value;
+        let dayOld = dayInput.value - currentDay;
+
+
+        console.log(currentDay);
+        console.log(currentMonth);
+
+        console.log(monthOld);
+        console.log(dayOld);
+        
+
+        //output
+        yearOutput.innerText = yearOld;
+        monthOutput.innerText = monthOld;
+        dayOutput.innerText = dayOld;
+
+    } 
+    
+    
+    
+    else {
+        console.log(1)
+    }
+
 })
 
 
@@ -45,38 +82,69 @@ const setSuccess = element => {
 }
 
 
+
 const validateInput = () => {
     const dayValue = dayInput.value;
+
     const monthValue = monthInput.value;
     const yearValue = yearInput.value;
 
+    // day
+
     if(dayValue === '') {
         setError (dayInput, 'This field is required');
-        isTrue = false;
-    }
+        isValid = false;
+    } 
     
+    else if (dayValue > 31) {
+        setError(dayInput, 'invalid date');
+        isValid = false;
+    }
+
     else {
-        setSuccess (dayInput);
-        isTrue = true;
+        setSuccess(dayInput);
+        isValid = true;
     }
 
 
+
+    // month
     if(monthValue === '') {
         setError (monthInput, 'This field is required');
-        isTrue = false;
-    } else {
-        setSuccess (monthInput);
-        isTrue = true;
+        isValid = false;
+    } 
+    
+    else if (monthValue > 12) {
+        setError(monthInput, 'invalid date');
+        isValid = false;
+    }
+
+    else {
+        setSuccess(monthInput);
+        isValid = true;
     }
 
 
 
+    // year
+    
     if(yearValue === '') {
         setError (yearInput, 'This field is required');
-        isTrue = false;
-    } else {
-        setSuccess (yearInput);
-        isTrue = true;
+        isValid = false;
+    } 
+    
+    else if (yearValue > 2023) {
+        setError(yearInput, 'invalid date');
+        isValid = false;
+    }
+
+    else {
+        setSuccess(yearInput);
+        isValid = true;
     }
 
 }
+
+
+
+
