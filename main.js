@@ -29,7 +29,7 @@ form.addEventListener('submit', e => {
 
         // get current date
         let currentDate = new Date();
-        let currentDay = currentDate.getDate();
+        let currentDay = currentDate.getDay();
         let currentMonth = currentDate.getMonth();
         let currentYear = currentDate.getFullYear();
 
@@ -37,16 +37,9 @@ form.addEventListener('submit', e => {
         // current age 
         let yearOld = currentYear -  yearInput.value;
         let monthOld = currentMonth - monthInput.value;
-        let dayOld = dayInput.value - currentDay;
-
-
-        console.log(currentDay);
-        console.log(currentMonth);
-
-        console.log(monthOld);
-        console.log(dayOld);
+        let dayOld = currentDay - dayInput.value;
         
-
+    
         //output
         yearOutput.innerText = yearOld;
         monthOutput.innerText = monthOld;
@@ -54,11 +47,6 @@ form.addEventListener('submit', e => {
 
     } 
     
-    
-    
-    else {
-        console.log(1)
-    }
 
 })
 
